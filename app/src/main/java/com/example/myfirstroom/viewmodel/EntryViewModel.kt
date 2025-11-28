@@ -63,3 +63,8 @@ fun com.example.myfirstroom.viewmodel.DetailSiswa.toSiswa(): Siswa = Siswa(
     alamat = alamat,
     telpon = telpon
 )
+
+fun Siswa.toUiStateSiswa(isEntryValid: Boolean = false): com.example.myfirstroom.viewmodel.UIStateSiswa = UIStateSiswa(
+    detailSiswa = this.toDetailSiswa(),
+    isEntryValid = isEntryValid
+)
